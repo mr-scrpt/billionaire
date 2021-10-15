@@ -1,0 +1,39 @@
+{
+	"menu_header": [
+		{
+			"name": "Джанкет-Туры",
+			"href": "#tours"
+		},
+		{
+			"name": "Казино",
+			"href": "#casino"
+		},
+		{
+			"name": "Отель",
+			"href": "#hotel"
+		},
+		{
+			"name": "Бары и рестораны",
+			"href": "#bar"
+		},
+
+		{
+			"name": "Контакты",
+			"href": "#contacts"
+		}
+	],
+	"menu_footer": [
+		{
+			"name": "Responsible game",
+			"href": "#"
+		},
+		{
+			"name": "Application for self restriction",
+			"href": "#"
+		},
+		{
+			"name": "Rules",
+			"href": "#"
+		}
+	]
+}

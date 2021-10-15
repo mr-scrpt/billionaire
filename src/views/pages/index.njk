@@ -1,0 +1,27 @@
+{% extends "layouts/layout.njk" %}
+
+{% block main %}
+	{% set inject = {
+		parentClass: 'page__menu',
+		menuClass: 'menu-overflow',
+		listData: menu.menu_header,
+		menuItemTpl: 'menu-item'
+	} %}
+
+	{% include "blocks/menu/menu-overflow-list.njk" %}
+
+	{% include "blocks/sections/age-confirm.njk" %}
+
+	{% include "blocks/header/header.njk" %}
+	{% include "blocks/sections/text-mobile.njk" %}
+	{% include "blocks/sections/conditions.njk" %}
+	{% include "blocks/sections/tours.njk" %}
+	{% include "blocks/sections/casino.njk" %}
+	{% include "blocks/sections/hotel.njk" %}
+	{% include "blocks/sections/bar.njk" %}
+	{# {% include "blocks/sections/bar-mobile.njk" %} #}
+	{% include "blocks/sections/form-section.njk" %}
+	{% include "blocks/sections/contact-section.njk" %}
+	{% include "blocks/sections/footer-section.njk" %}
+
+{% endblock %}

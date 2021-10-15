@@ -1,0 +1,7 @@
+<div class="menu-header {{inject.parentClass}}">
+	<nav class="menu-header__inner">
+		{% for item in inject.listData %}
+			{% include "blocks/menu/" + inject.menuItemTpl + ".njk" %}
+		{% endfor %}
+	</nav>
+</div>

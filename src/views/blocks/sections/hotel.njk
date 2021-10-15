@@ -1,0 +1,26 @@
+<section class="hotel page__section" id="hotel">
+	<div class="page__container">
+		<div class="title hotel__title">
+			<div class="title__section">hotel</div>
+		</div>
+	</div>
+	<div class="page__box">
+		<div class="hotel__text-box">
+			<div class="hotel__text">
+				Премиум-отель InterContinental Kyiv располагает номерами и апартаментами разных категорий
+			</div>
+
+		</div>
+		<div class="hotel__inner">
+			{% for item in hotel.hotel_list %}
+				{% include "blocks/items/hotel-item.njk" %}
+			{% endfor %}
+		</div>
+	</div>
+	<div class="page__container">
+		<div class="title hotel__title-long">
+			<div class="title__section title__section_l">InterContinental</div>
+		</div>
+	</div>
+
+</section>

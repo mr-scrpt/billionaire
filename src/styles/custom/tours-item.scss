@@ -1,0 +1,166 @@
+.tours-item_standart {
+	.tours-item__title {
+		&:after {
+			height: 1px;
+			width: 100px;
+			background: url("../img/deco/deco_title_line_simple.svg") no-repeat;
+			bottom: -10px;
+			left: 0;
+			@include bp768-block() {
+				height: 1px;
+				width: 100px;
+				background: url("../img/deco/deco_title_line_simple.svg")
+					no-repeat;
+				bottom: -10px;
+				left: 0;
+			}
+		}
+	}
+}
+
+.tours-item_premium {
+	@include bp994-block() {
+		margin-top: -40px;
+		margin-bottom: 40px;
+	}
+
+	.tours-item__title {
+		&:after {
+			height: 23px;
+			width: 204px;
+			background: url("../img/deco/deco_title_line_premium.svg") no-repeat;
+			bottom: -28px;
+			left: 0;
+			@include bp768-block() {
+				height: 23px;
+				width: 204px;
+				background: url("../img/deco/deco_title_line_premium.svg")
+					no-repeat;
+				bottom: -28px;
+				left: 0;
+			}
+		}
+	}
+}
+.tours-item {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 2;
+		font-size: 16px;
+		color: $color_main;
+		background: $color_base;
+		padding: 15px;
+		margin-bottom: 30px;
+
+		//background: $color_light;
+		/* background: linear-gradient(
+			90deg,
+			rgba($color_light, 1) 0%,
+			rgba($color_light, 0) 100%
+		); */
+
+		@include bp768-block() {
+			//background: $color_base;
+			/* 	color: $color_main;
+			margin-bottom: 30px; */
+		}
+		@include bp994-block() {
+			margin-bottom: 0;
+		}
+
+		/* &:before {
+			@include bp768-block() {
+				display: none;
+			}
+			position: absolute;
+			z-index: 1;
+			content: "";
+			top: 1px;
+			right: 1px;
+			bottom: 1px;
+			left: 1px;
+			background: $color_dark;
+		} */
+
+		/* &:after {
+			position: absolute;
+			content: "";
+			background: url("../img/deco/deco_bucks.svg");
+			width: 32px;
+			height: 52px;
+			right: 0;
+			top: -15px;
+			z-index: 2;
+			@include bp768-block() {
+				display: none;
+			}
+		} */
+	}
+
+	&__title {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 34px;
+
+		margin-bottom: 25px;
+		position: relative;
+		z-index: 1;
+		&:after {
+			position: absolute;
+			content: "";
+		}
+		@include bp768-block() {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__list {
+		flex-grow: 1;
+		margin-bottom: 80px;
+		@include bp768-block() {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list-item {
+		position: relative;
+		padding-left: 15px;
+		padding-bottom: 10px;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 400;
+		z-index: 1;
+		&:before {
+			position: absolute;
+			content: "";
+			mask-image: url("../img/deco/deco_list_circle.svg");
+			background-color: $color_light;
+			width: 6px;
+			height: 6px;
+			left: 0;
+			top: 8px;
+			@include bp768-block() {
+				background-color: $color_dark;
+			}
+		}
+	}
+
+	&__deposit {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 20px;
+		z-index: 1;
+	}
+	&__deposit-value {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	&__button-box {
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,15 @@
+<section class="casino page__section" id="casino">
+	<div class="page__container">
+		<div class="title casino__title">
+			<div class="title__section">Casino</div>
+		</div>
+	</div>
+	<div class="page__box">
+		<div class="casino__inner">
+			{% for item in casino.casino_list %}
+				{% include "blocks/items/casino-item.njk" %}
+			{% endfor %}
+		</div>
+	</div>
+
+</section>

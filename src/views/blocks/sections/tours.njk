@@ -1,0 +1,17 @@
+<section class="tours" id="tours">
+	<div class="page__container">
+		<div class="title tours__title">
+			<div class="title__main">Junket Tours</div>
+		</div>
+	</div>
+
+	<div class="page__box">
+		<div class="tours__inner">
+			{% for item in tours.tours_list %}
+				{% include "blocks/items/tours-item.njk" %}
+			{% endfor %}
+
+		</div>
+	</div>
+
+</section>

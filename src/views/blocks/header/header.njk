@@ -1,0 +1,65 @@
+<header class="header page__header" >
+
+	<div class="header__inner layout__wrap">
+		<div class="header__line" id="scrollTo">
+			{# LOGOTIP BLOCK #}
+			{% set inject = {
+				parentClass: 'header__logo'
+			} %}
+
+			{% include "blocks/logo/logo.njk" %}
+			{# LOGOTIP BLOCK END#}
+
+			{# MENU BLOCK #}
+			{% set inject = {
+				parentClass: 'header__menu',
+				menuClass: 'menu-header',
+				listData: menu.menu_header,
+				menuItemTpl: 'menu-item'
+			} %}
+
+			{% include "blocks/menu/menu-header.njk" %}
+			{# MENU BLOCK END#}
+
+			{# SWITCH LANG BLOCK #}
+			<div class="switcher header__switcher">
+				<div class="switcher__inner">
+					<div class="switcher__lang">RU</div>
+				</div>
+			</div>
+			{# SWITCH LANG BLOCK END#}
+
+			{# CONTROL OVERFOW MENU BLOCK #}
+			{% set inject = {
+				parentClass: 'header__menu'
+
+			} %}
+
+			{% include "blocks/menu/menu-overflow-control.njk" %}
+			{# CONTROL OVERFOW MENU BLOCK END#}
+
+		</div>
+		<div class="header__content s-header menu-overflow__element">
+			<div class="s-header__inner">
+
+				{# LOGOTIP BLOCK #}
+				{% set inject = {
+				parentClass: 's-header__logo'
+				} %}
+
+				{% include "blocks/logo/logo.njk" %}
+				{# LOGOTIP BLOCK END#}
+
+				<div class="s-header__title deco deco_font_alt">BILLIONAIRE  CASINO</div>
+				<div class="s-header__text">{{texts.header_text}}</div>
+				<div class="s-header__link">
+					<a href="#screen_second" class="link to-screen">
+						<div class="icon icon_to-screen"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</header>

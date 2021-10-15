@@ -1,0 +1,40 @@
+/* ЗАТУХАНИЕ */
+@mixin ts($obj, $obj2: "empty", $obj3: "empty") {
+	transition: $obj $th;
+	@if $obj2 != "empty" {
+		transition: $obj $th, $obj2 $th;
+	}
+	@if $obj3 != "empty" {
+		transition: $obj $th, $obj2 $th, $obj3 $th;
+	}
+}
+
+@mixin container() {
+	max-width: $break_bp1440;
+	margin: auto;
+}
+
+@mixin box() {
+	max-width: 1170px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: auto;
+}
+
+@mixin spot($position) {
+	@include bp768-block() {
+		position: absolute;
+		content: "";
+		background: #662238;
+		filter: blur(150px);
+		width: 578px;
+		height: 578px;
+		top: 0;
+		@if $position == "left" {
+			left: 0;
+		}
+		@if $position == "right" {
+			right: 0;
+		}
+	}
+}

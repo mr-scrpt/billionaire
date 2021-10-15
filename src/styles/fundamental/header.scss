@@ -1,0 +1,47 @@
+.header {
+	&__inner {
+		z-index: 1;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		/* @include bp994-block() {
+			padding: 15px 150px;
+		} */
+	}
+
+	&__line {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 20px 0;
+		@include bp994-block() {
+			padding: 15px 25px;
+		}
+		@include bp1280-block() {
+			padding: 15px 150px;
+		}
+	}
+
+	&__logo {
+		min-width: 50px;
+	}
+	&__switcher {
+		margin-left: auto;
+		margin-right: 25px;
+		@include bp768-block() {
+		}
+	}
+	&__menu {
+		flex-grow: 0;
+
+		@include bp768-block() {
+			flex-grow: 1;
+		}
+	}
+
+	&__content {
+		flex-grow: 1;
+	}
+}

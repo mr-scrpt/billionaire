@@ -1,0 +1,34 @@
+.tours {
+	position: relative;
+	&:after {
+		@include spot(right);
+	}
+	&__inner {
+		@include row-flex();
+		padding: 25px 0;
+
+		@include bp768-block() {
+			padding: 100px 0;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		@include col();
+		@include size(12);
+		@include size-bp768(6);
+		@include size-bp994(4);
+		display: flex;
+		position: relative;
+		margin-bottom: 55px;
+		&:before {
+			position: absolute;
+			content: "";
+			background: url();
+		}
+
+		@include bp768-block() {
+			margin-bottom: 0;
+		}
+	}
+}

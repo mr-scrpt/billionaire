@@ -1,0 +1,15 @@
+<section class="conditions page__section" id="screen_second">
+	<div class="conditions__inner layout__wrap">
+		<div class="conditions__title title">
+			<div class="title__sub">Условия Джанкет-Туры</div>
+		</div>
+		<div class="conditions__box">
+
+			{% for item in conditions.conditions_list %}
+				{% include "blocks/items/conditions-item.njk" %}
+
+			{% endfor %}
+
+		</div>
+	</div>
+</section>

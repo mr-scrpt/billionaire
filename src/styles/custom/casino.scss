@@ -1,0 +1,50 @@
+.casino {
+	position: relative;
+	&:after {
+		display: none;
+		@include bp994-block() {
+			display: block;
+			@include spot(left);
+		}
+	}
+	&__title {
+		text-align: right;
+		margin-bottom: 20px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		z-index: 1;
+		margin: 0 -15px;
+	}
+	&__item {
+		width: 100%;
+		margin: 0 15px;
+		display: flex;
+		margin-bottom: 15px;
+
+		&_width {
+			width: 100%;
+		}
+
+		@include bp994-block() {
+			//width: 25%;
+			width: calc(25% - 30px);
+
+			&_width {
+				width: calc(50% - 30px);
+				order: 0;
+			}
+		}
+
+		@include bp768-block() {
+			width: calc(50% - 30px);
+			&_width {
+				width: 100%;
+				order: -1;
+			}
+		}
+	}
+}

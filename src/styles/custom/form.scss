@@ -1,0 +1,49 @@
+.form {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+	&__list {
+		position: relative;
+		padding-bottom: 1px;
+		display: flex;
+		flex-direction: column;
+		z-index: 2;
+		//background: $color_dark;
+		/* background: linear-gradient(
+			90deg,
+			rgba($color_light, 1) 0%,
+			rgba($color_light, 0) 100%
+		); */
+		/* 	@include bp994-block() {
+			background: transparent;
+		} */
+
+		/* &:before {
+			@include bp994-block() {
+				display: none;
+			}
+			position: absolute;
+			z-index: 1;
+			content: "";
+			top: 1px;
+			right: 1px;
+			bottom: 1px;
+			left: 1px;
+			background: $color_dark;
+		} */
+	}
+
+	&__item {
+		position: relative;
+		z-index: 1;
+		/* margin: 10px 0; */
+	}
+
+	&__button-box {
+		margin-top: 50px;
+		margin-bottom: 15px;
+		display: flex;
+		justify-content: center;
+	}
+}

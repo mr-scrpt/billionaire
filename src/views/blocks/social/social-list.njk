@@ -1,0 +1,8 @@
+<div class="social-list {{inject.parentClass}}">
+	<div class="social-list__inner">
+		{% for item in inject.listData %}
+			{% include "blocks/items/social-item.njk" %}
+		{% endfor %}
+
+	</div>
+</div>

@@ -1,0 +1,48 @@
+<section class="contacts page__section" id="contacts">
+	<div class="contacts__liner">
+		<div class="page__container">
+			<div class="title contacts__title">
+				<div class="title__section title__section_m">Contacts</div>
+			</div>
+
+			<div class="page__box contacts__inner">
+				<div class="contacts__address">
+					<div class="contacts__address-line">Bolshaya Zhytomyr Street, 2A, Kyiv</div>
+					<a href="tel:+380683333888" class="contacts__address-line link">+38 (068) 333 3888</a>
+					<div class="contacts__address-line">info@billionaire.ua</div>
+				</div>
+
+				<div class="contacts__social">
+
+					<div class="contacts__social-title">Contact us in Messenger and Follow us on the social network</div>
+					{% set inject = {
+						parentClass: 'contacts__social-list',
+						listData: social.social_list
+					}%}
+
+					{% include "blocks/social/social-list.njk" %}
+				</div>
+			</div>
+			<div class="contacts__map map">
+				<div class="map__inner">
+
+					<div class="map__img-box">
+						<img src="./img/bg_map.png" alt="" class="map__img map__img_dsc img">
+						<img src="./img/bg_map_mob.png" alt="" class="map__img map__img_mob img">
+					</div>
+					<div class="map__marker-block">
+						<div class="map__marker-box">
+							<span class="icon icon_marker"></span>
+						</div>
+						<div class="map__marker-text">
+							<div class="map__marker-title">InterContinental Kyiv</div>
+							<div class="map__marker-body">Bolshaya Zhytomyr Street, 2A, Kyiv</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section>

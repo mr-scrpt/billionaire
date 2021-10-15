@@ -1,0 +1,11 @@
+<div class="menu-overflow__screen {{inject.parentClass}}" >
+	<div class="menu-overflow__closer">
+		<span class="icon icon_close"></span>
+	</div>
+	<div class="menu-overflow__list">
+		{% for item in inject.listData %}
+			{% include "blocks/menu/" + inject.menuItemTpl + ".njk" %}
+		{% endfor %}
+	</div>
+
+</div>

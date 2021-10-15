@@ -1,0 +1,125 @@
+.icon {
+	min-width: 1em;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	text-align: center;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+.icon:empty:after {
+	visibility: hidden;
+	content: "\00A0";
+}
+
+.icon > img,
+.icon > svg {
+	margin: -5.15em 0 -5em;
+	vertical-align: middle;
+}
+
+.icon.icon_exemple {
+	background-image: url("../img/icon/icon_cart.svg");
+	width: 43px;
+	height: 43px;
+}
+
+.icon.icon_example2 {
+	mask-image: url("../img/icon/icon_close.svg");
+	background-color: $color_base;
+	width: 31px;
+	height: 21px;
+
+	&_alt {
+		background-color: red;
+	}
+}
+
+.icon.icon_burger {
+	mask-image: url("../img/icon/icon_burger.svg");
+	background-color: $color_light;
+	width: 24px;
+	height: 24px;
+}
+
+.icon.icon_close {
+	mask-image: url("../img/icon/icon_close.svg");
+	background-color: $color_light;
+	width: 34px;
+	height: 34px;
+}
+
+.icon.icon_to-screen {
+	mask-image: url("../img/icon/icon_to-screen.svg");
+	background-color: $color_light;
+	width: 22px;
+	height: 50px;
+}
+
+.icon.icon_clock {
+	mask-image: url("../img/icon/icon_clock.svg");
+	background-color: $color_light;
+	width: 40px;
+	height: 40px;
+}
+
+.icon.icon_chip {
+	mask-image: url("../img/icon/icon_chip.svg");
+	background-color: $color_light;
+	width: 40px;
+	height: 40px;
+}
+
+.icon.icon_crown {
+	mask-image: url("../img/icon/icon_crown.svg");
+	background-color: $color_light;
+	width: 40px;
+	height: 40px;
+}
+
+.icon.icon_to-top {
+	mask-image: url("../img/icon/icon_to-top.svg");
+	background-color: $color_light;
+	width: 78px;
+	height: 78px;
+}
+
+.icon.icon_marker {
+	mask-image: url("../img/icon/icon_marker.svg");
+	background-color: $color_light;
+	width: 20px;
+	height: 27px;
+	mask-repeat: no-repeat;
+	mask-size: cover;
+
+	@include bp768-block() {
+		width: 35px;
+		height: 48px;
+	}
+
+	@include bp994-block() {
+		width: 55px;
+		height: 77px;
+	}
+}
+
+.icon.icon_social {
+	background-color: $color_light;
+	width: 56px;
+	height: 56px;
+	&_tg {
+		mask-image: url("../img/icon/icon_social_tg.svg");
+	}
+	&_viber {
+		mask-image: url("../img/icon/icon_social_viber.svg");
+	}
+	&_whatsapp {
+		mask-image: url("../img/icon/icon_social_whatsapp.svg");
+	}
+	&_insta {
+		mask-image: url("../img/icon/icon_social_insta.svg");
+	}
+	&_fb {
+		mask-image: url("../img/icon/icon_social_fb.svg");
+	}
+}

@@ -1,0 +1,24 @@
+.text-mobile {
+	@include bp768-block() {
+		display: none;
+	}
+	&__inner {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		//justify-content: center;
+		align-items: center;
+		margin-bottom: 100px;
+	}
+
+	/* &__title {
+		text-align: center;
+		margin-bottom: 40px;
+	} */
+
+	&__text {
+		text-align: center;
+		width: 320px;
+	}
+}

@@ -1,0 +1,134 @@
+.map {
+	&__inner {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		@include bp768-block() {
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: $color_dark;
+				opacity: 0.3;
+			}
+		}
+	}
+
+	&__img-box {
+		position: relative;
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				180deg,
+				#451525 0%,
+				rgba(69, 21, 37, 0) 80%
+			);
+
+			z-index: 3;
+		}
+		&:before {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(rgba(69, 21, 37, 0) 20%, #451525 100%);
+
+			z-index: 3;
+		}
+	}
+
+	&__img {
+		&_dsc {
+			display: none;
+			@include bp540-block() {
+				display: block;
+			}
+		}
+		&_mob {
+			display: block;
+
+			@include bp540-block() {
+				display: none;
+			}
+		}
+	}
+
+	&__marker-block {
+		position: absolute;
+		z-index: 3;
+		display: flex;
+		right: 10%;
+		top: 50%;
+		width: 180px;
+		@include bp540-block() {
+			width: 260px;
+			right: 5%;
+		}
+		@include bp768-block() {
+			right: 10%;
+		}
+		@include bp768-block() {
+			width: 500px;
+		}
+		/* transform: translate(-50%, -50%); */
+	}
+
+	&__marker-box {
+		/* display: flex;
+		justify-content: center; */
+		padding: 2px 5px;
+		@include bp994-block() {
+			padding: 2px 15px;
+		}
+	}
+
+	&__marker-text {
+		display: flex;
+		flex-wrap: wrap;
+
+		flex-grow: 1;
+	}
+
+	&__marker-title {
+		width: 100%;
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $color_light;
+		/* max-width: 150px;
+
+		@include bp768-block() {
+			max-width: 280px;
+			font-size: 30px;
+			line-height: 35px;
+		}
+		@include bp994-block() {
+			width: 680px;
+		} */
+		@include bp994-block() {
+			font-size: 30px;
+			line-height: 35px;
+			/* width: 680px; */
+		}
+	}
+
+	&__marker-body {
+		width: 100%;
+		font-size: 10px;
+		line-height: 17px;
+		@include bp994-block() {
+			font-size: 14px;
+			line-height: 24px;
+		}
+		/* max-width: 150px; */
+	}
+}

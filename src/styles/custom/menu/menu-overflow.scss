@@ -1,0 +1,78 @@
+.menu-overflow {
+	&__control {
+		display: flex;
+		align-items: center;
+
+		@include bp768-block() {
+			display: none;
+		}
+	}
+
+	&__closer {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+
+	&__screen {
+		position: absolute;
+		transform: translateX(-99999px);
+		z-index: 3;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+		padding: 15px 0;
+		font-size: 20px;
+	}
+
+	&_open {
+		overflow: hidden;
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 3;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(
+				360deg,
+				#451525 7.9%,
+				rgba(117, 16, 50, 0) 137.94%
+			);
+			backdrop-filter: blur(1.4px);
+		}
+		.menu-overflow__screen {
+			animation: slideMenuOpen 1s forwards;
+			/* transform: translateY(0); */
+		}
+
+		.menu-overflow__element {
+			animation: opacityElemOff 0.5s forwards;
+		}
+	}
+
+	&_close {
+		.menu-overflow__screen {
+			animation: slideMenuClose 1s forwards;
+			/* transform: translateY(-99999px); */
+		}
+		.menu-overflow__element {
+			animation: opacityElemOn 1s forwards;
+		}
+	}
+}

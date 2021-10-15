@@ -1,0 +1,30 @@
+.hotel {
+	&__inner {
+		@include row-flex();
+	}
+
+	&__item {
+		@include col();
+		@include size(12);
+		@include size-bp768(4);
+		margin-bottom: 15px;
+	}
+
+	&__title-long {
+		text-align: right;
+	}
+	&__text-box {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__text {
+		font-size: 16px;
+		text-align: center;
+		margin: 20px 0;
+		color: $color_light;
+		@include bp768-block() {
+			max-width: 600px;
+		}
+	}
+}

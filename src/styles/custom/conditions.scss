@@ -1,0 +1,105 @@
+.conditions {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		top: -220px;
+		width: 156px;
+		height: 354px;
+		background: url("../img/deco/deco_pattern_1.svg") no-repeat;
+		background-size: contain;
+		@include bp768-block() {
+			top: 50%;
+			transform: translateY(-50%);
+			width: 290px;
+			height: 658px;
+		}
+	}
+	&__inner {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 0 100px;
+	}
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	&__box {
+		max-width: 890px;
+	}
+
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 35px;
+		@include bp768-block() {
+			margin-bottom: 0;
+		}
+	}
+
+	&__cell {
+		/* background-color: green; */
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+
+		padding: 20px 0;
+		@include bp768-block() {
+			width: auto;
+			justify-content: flex-start;
+		}
+	}
+	&__left {
+		/* 	width: 100%; */
+		@include bp768-block() {
+			width: 35%;
+			max-width: 300px;
+			min-width: 150px;
+		}
+	}
+	&__right {
+		/* width: 100%; */
+		@include bp768-block() {
+			width: 65%;
+			max-width: calc(100% - 300px);
+			min-width: calc(100% -150px);
+		}
+	}
+
+	&__icon {
+		margin-right: 30px;
+	}
+	&__name-box {
+		color: $color_light;
+		font-size: 16px;
+		line-height: 28px;
+		font-weight: 400;
+		/* background-color: blue; */
+	}
+	&__name {
+		max-width: 95px;
+		@include bp768-block() {
+			max-width: 150px;
+		}
+	}
+	&__text {
+		/* background-color: pink; */
+		line-height: 22px;
+		font-size: 14px;
+
+		text-align: center;
+		@include bp768-block() {
+			text-align: left;
+		}
+	}
+}

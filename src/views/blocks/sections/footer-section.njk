@@ -1,0 +1,18 @@
+<div class="footer page__section">
+	<div class="footer__inner">
+
+		<div class="footer__text-box">
+			<div class="footer__text">LLC “Billionaire Casino Company”</div>
+			<div class="footer__text">License dated 20.04.21 (Decision on issuing licenses number 138 dated 05.04.2021)</div>
+			<div class="footer__text">21+ © 2021 billionaire.ua All rules are protected.</div>
+		</div>
+
+		{% set inject = {
+			parentClass: "footer__menu",
+			menuItemTpl: "menu-item",
+			menuClass: 'menu-footer',
+			listData: menu.menu_footer
+		}%}
+		{% include "blocks/menu/footer-menu.njk" %}
+	</div>
+</div>

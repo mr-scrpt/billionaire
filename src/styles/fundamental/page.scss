@@ -1,0 +1,97 @@
+.page {
+	&_theme {
+		font: 14px / 2.14 "Tenor Sans", sans-serif;
+		color: $color_base;
+		background: $color_dark;
+		position: relative;
+	}
+	&_overflow {
+		overflow: hidden;
+	}
+
+	&__container {
+		@include container();
+	}
+
+	&__box {
+		@include box();
+	}
+
+	&__section {
+		margin-bottom: 100px;
+	}
+	&__header {
+		min-height: 630px;
+		height: 100vh;
+		max-height: 1440px;
+		background: $color_main
+			linear-gradient(
+				$color_dark 0,
+				$color_dark 10%,
+				$color_gradient 25%,
+				$color_gradient_dark 35%,
+				$color_dark 75%,
+				$color_dark 100%
+			);
+		@include bp768-block() {
+			min-height: 680px;
+		}
+		/* &:before {
+			@include bp768-block() {
+				display: none;
+			}
+			opacity: 0.7;
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(
+					rgba($color_dark, 1) 0,
+					rgba($color_dark, 1) 10%,
+					rgba($color_dark, 0) 50%,
+					rgba($color_dark, 1) 90%,
+					rgba($color_dark, 1) 100%
+				),
+				url("../img/bg_header.png");
+		} */
+	}
+}
+
+/* background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		background-color: $color_main;
+		background-image: url("../img/bg_header.png"),
+			linear-gradient(
+				$color_dark 0,
+				$color_dark 10%,
+				$color_gradient 25%,
+				$color_dark 45%,
+				$color_dark 100%
+			);
+
+
+
+ */
+
+/* $color_gradient_dark 0,
+				#451525 30%,
+				$color_gradient_dark 140% */
+/*
+$color_dark 0,
+$color_dark 60%,
+$color_gradient 85%,
+$color_dark 100%
+ */
+
+/*
+$color_dark 100%,
+$color_gradient 85%,
+$color_dark 60%,
+$color_dark 0,
+
+
+
+ */

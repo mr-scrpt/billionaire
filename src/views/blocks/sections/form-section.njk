@@ -1,0 +1,37 @@
+<section class="form-section page__section" id="form">
+	<div class="form-section__inner">
+		<div class="form-section__box">
+			<div class="form-section__title">Запланируй индивидуальный тур</div>
+			<div class="form form-section__form">
+				<form action="#" class="form__inner">
+					<div class="form__list">
+						{% set inject = {
+							itemClass: "form__item"
+						} %}
+						{% for item in form.form_list %}
+							{% include "blocks/forms/input.njk" %}
+						{% endfor %}
+					</div>
+
+					<div class="form__button-box">
+
+						<div class="button button_size_l button_view_b">
+							<div class="button__text">забронировать тур</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="form-section__action">Мы Вам перезвоним!</div>
+		</div>
+	</div>
+	<div class="page__box form-section__scrollTop">
+		<div class="to-top">
+			<div class="to-top__inner">
+				<a href="#scrollTo" class="to-top__button">
+					<span class="icon icon_to-top"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,32 @@
+.menu-header {
+	display: none;
+	@include bp768-block() {
+		display: flex;
+	}
+	&__inner {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item {
+		margin: 20px 0;
+		color: $color_light;
+		font-size: 18px;
+		letter-spacing: 0.05rem;
+
+		@include bp768-block() {
+			font-size: 16px;
+			margin: 0 7px;
+		}
+		@include bp994-block() {
+			margin: 0 20px;
+			font-size: 18px;
+		}
+		@include ts(color);
+
+		&:hover {
+			color: $color_base;
+		}
+	}
+}

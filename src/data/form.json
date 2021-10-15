@@ -1,0 +1,16 @@
+{
+	"form_list": [
+		{
+			"name": "name",
+			"placeholder": "Имя"
+		},
+		{
+			"name": "phone",
+			"placeholder": "Номер телефона"
+		},
+		{
+			"name": "mail",
+			"placeholder": "Почта"
+		}
+	]
+}

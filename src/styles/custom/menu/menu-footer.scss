@@ -1,0 +1,13 @@
+.menu-footer {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		margin: 10px 50px;
+		color: $color_light;
+		text-align: center;
+	}
+}

@@ -1,0 +1,68 @@
+/* Библиотеки */
+@import "./lib/smartgrid.scss";
+/* INIT */
+
+/* Пресеты */
+@import "./presets/reset.scss";
+@import "./presets/var.scss";
+@import "./presets/mixins.scss";
+@import "./presets/fonts.scss";
+@import "./presets/animation.scss";
+
+/* Фундоментальные Блоки */
+@import "./fundamental/page.scss";
+@import "./fundamental/layout.scss";
+@import "./fundamental/header.scss";
+@import "./fundamental/footer.scss";
+
+/* Блоки */
+@import "./blocks/button.scss";
+@import "./blocks/input.scss";
+@import "./blocks/textarea.scss";
+@import "./blocks/checkbox.scss";
+@import "./blocks/img.scss";
+@import "./blocks/title.scss";
+@import "./blocks/icon.scss";
+@import "./blocks/link.scss";
+@import "./blocks/deco.scss";
+@import "./blocks/text.scss";
+@import "./blocks/title.scss";
+@import "./blocks/relative-box.scss";
+
+/* Блоки Верстки */
+@import "./custom/logo.scss";
+@import "./custom/s-header.scss";
+@import "./custom/text-mobile.scss";
+@import "./custom/conditions.scss";
+@import "./custom/tours.scss";
+@import "./custom/tours-item.scss";
+@import "./custom/casino.scss";
+
+@import "./custom/hotel.scss";
+@import "./custom/item.scss";
+@import "./custom/bar.scss";
+@import "./custom/bar-mobile.scss";
+@import "./custom/form-section.scss";
+@import "./custom/form.scss";
+@import "./custom/to-top.scss";
+@import "./custom/contacts.scss";
+@import "./custom/map.scss";
+@import "./custom/age-confirm.scss";
+
+/* Навигация */
+@import "./custom/menu/menu-header.scss";
+@import "./custom/menu/menu-overflow.scss";
+@import "./custom/menu/menu-footer.scss";
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+}

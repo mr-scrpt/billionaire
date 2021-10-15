@@ -1,0 +1,19 @@
+<div class="tours-item tours-item_{{item.decoClass}} tours__item">
+	<div class="tours-item__inner">
+		<div class="tours-item__title-box">
+			<div class="tours-item__title">{{item.title}}</div>
+
+		</div>
+		<ul class="tours-item__list">
+			{% for itemsub in item.list%}
+				<li class="tours-item__list-item">{{itemsub}}</li>
+			{% endfor %}
+		</ul>
+		<div class="tours-item__deposit">Депозит: <span class="tours-item__deposit-value">{{item.deposit}}</span></div>
+		<div class="tours-item__button-box">
+			<a href="#form" class="button button_size_l">
+				<div class="button__text">Забронировать тут</div>
+			</a>
+		</div>
+	</div>
+</div>
